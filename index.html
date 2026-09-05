@@ -1,146 +1,23 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="樊慕清的个人简历。前端开发工程师，主要使用 JavaScript、React 与 Node.js，展示工作经历、1688 商家后台及 AI 个人练习项目。">
-  <meta name="theme-color" content="#f2f4f7">
-  <meta property="og:title" content="樊慕清 · 前端开发工程师">
-  <meta property="og:description" content="JavaScript / React / Node.js · 工作经历与个人项目">
-  <meta property="og:type" content="website">
-  <title>樊慕清 · 前端开发工程师</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">跳转到简历内容</a>
-  <header class="topbar">
-    <a class="brand" href="#intro" aria-label="樊慕清，返回简介">樊慕清<span>个人简历</span></a>
-    <nav aria-label="页面导航">
-      <a href="#skills">能力</a>
-      <a href="#experience">经历</a>
-      <a href="#projects">项目</a>
-      <a href="#contact">联系</a>
-    </nav>
-  </header>
-
-  <main id="main" class="page">
-    <section id="intro" class="intro panel" aria-labelledby="name">
-      <div class="intro-copy">
-        <p class="eyebrow">HANGZHOU · FRONTEND DEVELOPER</p>
-        <h1 id="name">樊慕清</h1>
-        <p class="position">前端开发工程师<span>React 方向</span></p>
-        <p class="lead">以 JavaScript 为主要开发语言，专注业务页面、组件复用与接口联调。持续学习 AI Agent 与 AI 应用开发。</p>
-        <p class="intro-meta">华北理工大学 · 计算机科学与技术 · 本科</p>
-        <div class="actions">
-          <a class="button primary" href="assets/樊慕清.docx" download="樊慕清.docx">下载简历 <span aria-hidden="true">↓</span></a>
-          <a class="button secondary" href="#projects">查看项目</a>
-        </div>
-      </div>
-      <figure class="portrait">
-        <img src="assets/portrait.jpg" alt="樊慕清的个人照片" width="230" height="345" fetchpriority="high">
-        <figcaption>男 · 杭州，滨江</figcaption>
-      </figure>
-      <div class="intro-strip" aria-label="开发背景">
-        <p><strong>近 1 年</strong><span>前端全职开发经历</span></p>
-        <p><strong>JavaScript / React</strong><span>主要开发技术</span></p>
-        <p><strong>1688 商家后台</strong><span>参与开发的已上线项目</span></p>
-      </div>
-    </section>
-
-    <section id="skills" class="section" aria-labelledby="skills-title">
-      <div class="section-head"><h2 id="skills-title">能力与技术</h2><span class="section-kicker">WHAT I WORK WITH</span></div>
-      <div class="skill-grid">
-        <article class="panel skill-card">
-          <span class="card-caption">页面与交互</span>
-          <h3>React 业务开发</h3>
-          <p>实现数据看板、商品管理和弹窗交互，使用 Hooks 管理页面状态，按设计稿还原界面。</p>
-          <div class="tags"><span>JavaScript</span><span>React</span><span>TypeScript</span><span>Ant Design</span></div>
-        </article>
-        <article class="panel skill-card">
-          <span class="card-caption">接口与协作</span>
-          <h3>联调与问题排查</h3>
-          <p>配合后端完成接口联调，处理页面适配、浏览器兼容与 Bug 修复，使用 Git 进行协作。</p>
-          <div class="tags"><span>Node.js</span><span>Git</span><span>Figma</span><span>HTML / CSS</span></div>
-        </article>
-        <article class="panel skill-card">
-          <span class="card-caption">学习与探索</span>
-          <h3>AI 应用方向</h3>
-          <p>围绕面试练习与代码审查设计个人练习项目，关注模型接口、提示词与结构化反馈。</p>
-          <div class="tags"><span>个人练习项目</span><span>大模型 API</span><span>Express</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="experience" class="section" aria-labelledby="experience-title">
-      <div class="section-head"><h2 id="experience-title">工作经历</h2><span class="section-kicker">EXPERIENCE</span></div>
-      <article class="panel experience-card">
-        <header class="record-head">
-          <div><p class="card-caption">前端开发工程师 · 全职</p><h3>金易宝软件（杭州）有限公司</h3></div>
-          <p class="date">2025.11 — 2026.08</p>
-        </header>
-        <p class="record-intro">负责 1688 商家后台前端功能开发，主要涉及销售数据看板、商品管理与弹窗模块。</p>
-        <ul class="detail-list">
-          <li><strong>页面实现</strong><span>基于内部设计框架及 Figma 设计稿完成页面还原，处理响应式布局与浏览器兼容问题。</span></li>
-          <li><strong>业务协作</strong><span>配合后端完成接口联调，参与 Bug 排查修复及 Git 协作，维护和调整已有业务代码。</span></li>
-          <li><strong>需求交付</strong><span>任职期间累计交付约 50 项前端功能需求，涉及的数据看板、商品管理及弹窗功能已上线。</span></li>
-        </ul>
-      </article>
-    </section>
-
-    <section id="projects" class="section" aria-labelledby="projects-title">
-      <div class="section-head"><h2 id="projects-title">项目经历</h2><span class="section-kicker">SELECTED PROJECTS</span></div>
-      <article class="panel project business-project">
-        <header class="record-head">
-          <div><span class="badge">企业项目 · 已上线</span><h3>1688 商家后台</h3></div>
-          <p class="date">2025.11 — 2026.08</p>
-        </header>
-        <p class="record-intro">面向商家运营的后台系统，将销售数据展示、商品操作与业务弹窗组织在日常管理流程中。</p>
-        <div class="project-grid">
-          <div><h4>销售数据看板</h4><p>统计卡片展示近期销售数据。支持近 7 天 / 近 30 天切换，重新请求接口并更新页面数据。</p></div>
-          <div><h4>商品管理</h4><p>商品列表、搜索筛选、新增与编辑、上下架、删除、分页和图片上传，并完成接口联调。</p></div>
-          <div><h4>弹窗复用</h4><p>复用 Ant Design 组件；针对复杂业务封装弹窗逻辑，并为删除操作增加二次确认。</p></div>
-        </div>
-        <div class="tags"><span>JavaScript</span><span>React Hooks</span><span>TypeScript</span><span>Ant Design</span></div>
-      </article>
-
-      <div class="practice-grid">
-        <article class="panel project practice-project">
-          <header><span class="badge neutral">个人练习项目</span><h3>AI 面试 Agent</h3><p class="date">2026.09 — 至今</p></header>
-          <p>围绕前端面试设计练习流程：选择方向与难度、生成题目、提交回答并查看结构化反馈。</p>
-          <ul class="plain-list">
-            <li>React Hooks 管理题目、答题与加载状态。</li>
-            <li>Node.js / Express 封装模型请求，环境变量管理 API Key。</li>
-            <li>localStorage 保存练习记录；应用按本地运行方式设计，模型服务通过 API 接入。</li>
-          </ul>
-          <div class="tags"><span>React</span><span>Node.js</span><span>Express</span><span>大模型 API</span></div>
-        </article>
-        <article class="panel project practice-project">
-          <header><span class="badge neutral">个人练习项目</span><h3>代码审查 Agent</h3><p class="date">2026.09</p></header>
-          <p>围绕 JavaScript / React 代码设计辅助审查流程，按潜在问题、原因与修改建议组织报告。</p>
-          <ul class="plain-list">
-            <li>代码输入、审查规则选择、加载状态与报告展示。</li>
-            <li>通过提示词约束反馈结构，归纳可读性与潜在 Bug。</li>
-            <li>本地接口统一管理模型请求，localStorage 保存审查记录。</li>
-          </ul>
-          <div class="tags"><span>JavaScript</span><span>React</span><span>Express</span><span>大模型 API</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="education" class="section" aria-labelledby="education-title">
-      <div class="section-head"><h2 id="education-title">教育背景</h2><span class="section-kicker">EDUCATION</span></div>
-      <article class="panel education-card">
-        <div><h3>华北理工大学</h3><p>计算机科学与技术 · 本科</p></div>
-        <p class="date">2021.09 — 2025.06</p>
-      </article>
-    </section>
-
-    <section id="contact" class="section panel contact-card" aria-labelledby="contact-title">
-      <div><p class="card-caption">CONTACT</p><h2 id="contact-title">联系我</h2><p>前端开发岗位 · 杭州</p></div>
-      <div class="contact-links"><a href="mailto:Fanmou1ren@hotmail.com">Fanmou1ren@hotmail.com</a><a href="tel:+8618191933605">181 9193 3605</a></div>
-    </section>
-  </main>
-  <footer class="footer"><span>樊慕清 · 个人简历</span><a href="#intro">返回顶部 ↑</a></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="樊慕清的个人简历。前端开发工程师，主要使用 JavaScript、React 与 Node.js，展示工作经历、1688 商家后台及 AI 个人练习项目。"
+    />
+    <meta name="theme-color" content="#f2f4f7" />
+    <meta property="og:title" content="樊慕清 · 前端开发工程师" />
+    <meta
+      property="og:description"
+      content="JavaScript / React / Node.js · 工作经历与个人项目"
+    />
+    <meta property="og:type" content="website" />
+    <title>樊慕清 · 前端开发工程师</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
