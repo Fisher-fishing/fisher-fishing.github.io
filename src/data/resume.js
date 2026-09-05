@@ -20,14 +20,14 @@ export const profile = {
     {
       label: '前端开发工程师',
       description: 'JavaScript / React 方向',
-      href: '/assets/樊慕清-前端开发工程师.docx',
-      filename: '樊慕清-前端开发工程师.docx',
+      href: '/assets/樊慕清-前端开发工程师.pdf',
+      filename: '樊慕清-前端开发工程师.pdf',
     },
     {
       label: 'AI 应用开发工程师',
       description: 'React / Node.js / 大模型 API 方向',
-      href: '/assets/樊慕清-AI应用开发工程师.docx',
-      filename: '樊慕清-AI应用开发工程师.docx',
+      href: '/assets/樊慕清-AI应用开发工程师.pdf',
+      filename: '樊慕清-AI应用开发工程师.pdf',
     },
   ],
   highlights: [

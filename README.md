@@ -20,8 +20,8 @@
 │  ├─ .nojekyll                 # 跳过 Jekyll 处理
 │  └─ assets/
 │     ├─ portrait.jpg           # 个人照片
-│     ├─ 樊慕清-前端开发工程师.docx  # 前端岗位 Word 简历
-│     └─ 樊慕清-AI应用开发工程师.docx # AI 岗位 Word 简历
+│     ├─ 樊慕清-前端开发工程师.pdf   # 前端岗位 PDF 简历
+│     ├─ 樊慕清-AI应用开发工程师.pdf # AI 岗位 PDF 简历
 ├─ src/
 │  ├─ components/               # 页面区块组件
 │  ├─ data/resume.js            # 简历内容数据

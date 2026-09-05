@@ -42,7 +42,7 @@ function ResumeMenu({ resumes }) {
         aria-haspopup="true"
         onClick={() => setIsOpen((current) => !current)}
       >
-        下载简历
+        查看简历
         <span
           className={`resume-chevron${isOpen ? ' is-open' : ''}`}
           aria-hidden="true"
@@ -53,15 +53,31 @@ function ResumeMenu({ resumes }) {
       {isOpen && (
         <div id={menuId} className="resume-options" aria-label="选择简历版本">
           {resumes.map((resume) => (
-            <a
-              key={resume.href}
-              href={resume.href}
-              download={resume.filename}
-              onClick={() => setIsOpen(false)}
-            >
-              <strong>{resume.label}</strong>
-              <span>{resume.description}</span>
-            </a>
+            <div className="resume-option" key={resume.href}>
+              <div className="resume-option-copy">
+                <strong>{resume.label}</strong>
+                <span>{resume.description}</span>
+              </div>
+              <div className="resume-option-actions">
+                <a
+                  className="resume-option-action is-open"
+                  href={resume.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  在线打开
+                </a>
+                <a
+                  className="resume-option-action is-download"
+                  href={resume.href}
+                  download={resume.filename}
+                  onClick={() => setIsOpen(false)}
+                >
+                  下载 PDF
+                </a>
+              </div>
+            </div>
           ))}
         </div>
       )}

@@ -1,4 +1,61 @@
+import { useEffect, useState } from 'react';
+
+async function copyText(value) {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = value;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  const didCopy = document.execCommand('copy');
+  textarea.remove();
+
+  if (!didCopy) {
+    throw new Error('Copy command failed');
+  }
+}
+
 function Contact({ contact }) {
+  const [feedback, setFeedback] = useState(null);
+
+  useEffect(() => {
+    if (!feedback) return undefined;
+
+    const timer = window.setTimeout(() => setFeedback(null), 1800);
+    return () => window.clearTimeout(timer);
+  }, [feedback]);
+
+  async function handleCopy(field, value) {
+    try {
+      await copyText(value);
+      setFeedback({ field, message: '已复制' });
+    } catch {
+      setFeedback({ field, message: '复制失败' });
+    }
+  }
+
+  const contactItems = [
+    {
+      field: 'email',
+      label: '邮箱',
+      value: contact.email,
+      copyValue: contact.email,
+    },
+    {
+      field: 'phone',
+      label: '电话',
+      value: contact.phone,
+      copyValue: contact.phone.replace(/\D/g, ''),
+    },
+  ];
+
   return (
     <section
       id="contact"
@@ -11,12 +68,30 @@ function Contact({ contact }) {
         <p>{contact.description}</p>
       </div>
       <div className="contact-links">
-        <a href={`mailto:${contact.email}`}>{contact.email}</a>
-        <a href={`tel:${contact.phoneHref}`}>{contact.phone}</a>
+        {contactItems.map((item) => {
+          const itemFeedback = feedback?.field === item.field;
+
+          return (
+            <button
+              key={item.field}
+              className="copy-contact"
+              type="button"
+              aria-label={`复制${item.label}：${item.value}`}
+              onClick={() => handleCopy(item.field, item.copyValue)}
+            >
+              <span className="copy-value">{item.value}</span>
+              <span
+                className={`copy-hint${itemFeedback ? ' is-visible' : ''}`}
+                aria-live="polite"
+              >
+                {itemFeedback ? feedback.message : '复制'}
+              </span>
+            </button>
+          );
+        })}
       </div>
     </section>
   );
 }
 
 export default Contact;
-

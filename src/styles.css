@@ -1,5 +1,5 @@
 :root {
-  --bg: #f2f4f7;
+  --bg: #edf5fb;
   --paper: #ffffff;
   --ink: #16202b;
   --body: #425061;
@@ -102,13 +102,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(calc(100% - 48px), var(--width));
+  width: 100%;
   min-height: 82px;
   margin: auto;
+  padding-inline: max(24px, calc((100% - var(--width)) / 2));
   gap: 24px;
-  background: rgba(242, 244, 247, 0.94);
+  background: #ffffff;
   border-bottom: 1px solid transparent;
-  backdrop-filter: blur(14px);
 }
 
 .topbar.scrolled {
@@ -286,7 +286,7 @@ ul {
   z-index: 20;
   top: calc(100% + 8px);
   left: 0;
-  width: 280px;
+  width: 330px;
   padding: 7px;
   background: #ffffff;
   border: 1px solid #c9d3dd;
@@ -294,28 +294,63 @@ ul {
   box-shadow: 0 14px 34px rgba(37, 53, 72, 0.16);
 }
 
-.resume-options a {
+.resume-option {
+  padding: 10px 12px;
+}
+
+.resume-option + .resume-option {
+  border-top: 1px solid #e5ebf0;
+}
+
+.resume-option-copy {
   display: grid;
   gap: 3px;
-  padding: 10px 12px;
-  border-radius: 7px;
 }
 
-.resume-options a:hover,
-.resume-options a:focus-visible {
-  color: inherit;
-  background: #edf3f8;
-  outline: none;
-}
-
-.resume-options strong {
+.resume-option-copy strong {
   font-size: 0.875rem;
 }
 
-.resume-options span {
+.resume-option-copy span {
   color: var(--muted);
   font-size: 0.75rem;
   line-height: 1.5;
+}
+
+.resume-option-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 9px;
+}
+
+.resume-option-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 4px 11px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.resume-option-action.is-open {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+.resume-option-action.is-open:hover {
+  background: #304b61;
+}
+
+.resume-option-action.is-download {
+  color: var(--accent);
+  background: #ffffff;
+  border: 1px solid #c9d3dd;
+}
+
+.resume-option-action.is-download:hover {
+  background: #edf3f8;
 }
 
 .primary {
@@ -605,17 +640,55 @@ ul {
   gap: 8px;
 }
 
-.contact-links a:first-child {
+.copy-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 100%;
+  padding: 2px 0;
+  gap: 12px;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  line-height: 1.6;
+  text-align: right;
+  cursor: copy;
+}
+
+.copy-contact:first-child {
   font-size: 1.125rem;
   font-weight: 600;
 }
 
-.contact-links a {
+.copy-value {
   overflow-wrap: anywhere;
 }
 
-.contact-links a:hover {
+.copy-hint {
+  min-width: 40px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: right;
+  opacity: 0;
+  transform: translateX(4px);
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
+}
+
+.copy-contact:hover .copy-value,
+.copy-contact:focus-visible .copy-value {
   text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.copy-contact:hover .copy-hint,
+.copy-contact:focus-visible .copy-hint,
+.copy-hint.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .footer {
@@ -671,9 +744,9 @@ ul {
 
   .topbar {
     flex-wrap: wrap;
-    width: calc(100% - 32px);
+    width: 100%;
     min-height: 70px;
-    padding: 12px 0;
+    padding: 12px 16px;
     gap: 0;
   }
 
@@ -780,7 +853,7 @@ ul {
   }
 
   .resume-options {
-    width: min(280px, calc(100vw - 64px));
+    width: min(330px, calc(100vw - 74px));
   }
 
   .intro-strip {
@@ -882,7 +955,12 @@ ul {
     width: 100%;
   }
 
-  .contact-links a:first-child {
+  .copy-contact {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .copy-contact:first-child {
     font-size: 1rem;
   }
 
