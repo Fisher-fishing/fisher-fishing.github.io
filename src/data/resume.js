@@ -18,16 +18,16 @@ export const profile = {
   portrait: '/assets/portrait.jpg',
   resumes: [
     {
-      label: '前端开发工程师',
+      label: '前端开发',
       description: 'JavaScript / React 方向',
       href: '/assets/樊慕清-前端开发工程师.pdf',
-      filename: '樊慕清-前端开发工程师.pdf',
+      filename: '樊慕清-前端开发.pdf',
     },
     {
-      label: 'AI 应用开发工程师',
+      label: 'AI 应用',
       description: 'React / Node.js / 大模型 API 方向',
       href: '/assets/樊慕清-AI应用开发工程师.pdf',
-      filename: '樊慕清-AI应用开发工程师.pdf',
+      filename: '樊慕清-AI应用.pdf',
     },
   ],
   highlights: [
@@ -56,8 +56,8 @@ export const skills = [
     caption: '学习与探索',
     title: 'AI 应用方向',
     description:
-      '围绕面试练习与代码审查设计个人练习项目，关注模型接口、提示词与结构化反馈。',
-    tags: ['个人练习项目', '大模型 API', 'Express'],
+      '围绕面试练习与代码审查设计实践项目，关注模型接口、提示词与结构化反馈。',
+    tags: ['实践项目', '大模型 API', 'Express'],
   },
 ];
 
@@ -114,7 +114,7 @@ export const projects = {
   },
   practice: [
     {
-      badge: '个人练习项目',
+      badge: '实践项目',
       title: 'AI 面试 Agent',
       date: '2026.09 — 至今',
       introduction:
@@ -127,7 +127,7 @@ export const projects = {
       tags: ['React', 'Node.js', 'Express', '大模型 API'],
     },
     {
-      badge: '个人练习项目',
+      badge: '实践项目',
       title: '代码审查 Agent',
       date: '2026.09',
       introduction:
@@ -138,6 +138,19 @@ export const projects = {
         '本地接口统一管理模型请求，localStorage 保存审查记录。',
       ],
       tags: ['JavaScript', 'React', 'Express', '大模型 API'],
+    },
+    {
+      badge: '实践项目',
+      title: '个人简历网站',
+      date: '2026.09',
+      introduction:
+        '使用 React 与 Vite 构建个人简历展示网站，集中呈现工作经历、项目与不同方向的 PDF 简历。',
+      details: [
+        '组件化组织简介、能力、经历、项目、教育与联系方式等模块。',
+        '实现响应式布局、锚点导航、简历在线打开 / 下载及联系方式复制。',
+        '使用 GitHub Actions 构建并部署至 GitHub Pages。',
+      ],
+      tags: ['React', 'Vite', '响应式布局', 'GitHub Actions'],
     },
   ],
 };
