@@ -54,6 +54,12 @@ function Contact({ contact }) {
       value: contact.phone,
       copyValue: contact.phone.replace(/\D/g, ''),
     },
+    {
+      field: 'wechat',
+      label: '微信',
+      value: `微信：${contact.wechat}`,
+      copyValue: contact.wechat,
+    },
   ];
 
   return (
@@ -76,7 +82,7 @@ function Contact({ contact }) {
               key={item.field}
               className="copy-contact"
               type="button"
-              aria-label={`复制${item.label}：${item.value}`}
+              aria-label={`复制${item.label}：${item.copyValue}`}
               onClick={() => handleCopy(item.field, item.copyValue)}
             >
               <span className="copy-value">{item.value}</span>
