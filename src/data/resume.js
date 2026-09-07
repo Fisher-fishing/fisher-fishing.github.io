@@ -154,4 +154,5 @@ export const contact = {
   email: 'Fanmou1ren@hotmail.com',
   phone: '181 9193 3605',
   phoneHref: '+8618191933605',
+  wechat: 'FrostyNovember15',
 };
