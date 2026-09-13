@@ -597,7 +597,8 @@ ul {
   padding-top: 16px;
 }
 
-.education-card {
+.education-card,
+.contact-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -605,7 +606,8 @@ ul {
   padding: 26px 32px;
 }
 
-.education-card h3 {
+.education-card h3,
+.contact-card h3 {
   font-size: 1.1875rem;
 }
 
@@ -615,22 +617,7 @@ ul {
 }
 
 .contact-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  padding: 32px;
-  background: #eaf0f5;
-}
-
-.contact-card h2 {
-  margin: 8px 0;
-  font-size: 1.5rem;
-}
-
-.contact-card p {
-  color: var(--body);
-  font-size: 0.9375rem;
+  background: var(--paper);
 }
 
 .contact-links {

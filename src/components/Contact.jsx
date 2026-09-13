@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import SectionHeading from './SectionHeading.jsx';
 
 async function copyText(value) {
   if (navigator.clipboard && window.isSecureContext) {
@@ -63,39 +64,34 @@ function Contact({ contact }) {
   ];
 
   return (
-    <section
-      id="contact"
-      className="section panel contact-card"
-      aria-labelledby="contact-title"
-    >
-      <div>
-        <p className="card-caption">CONTACT ME</p>
-        <h2 id="contact-title">{contact.title}</h2>
-        <p>{contact.description}</p>
-      </div>
-      <div className="contact-links">
-        {contactItems.map((item) => {
-          const itemFeedback = feedback?.field === item.field;
+    <section id="contact" className="section" aria-labelledby="contact-title">
+      <SectionHeading id="contact-title" title={contact.title} kicker="CONTACT" />
+      <article className="panel contact-card">
+        <h3>{contact.description}</h3>
+        <div className="contact-links">
+          {contactItems.map((item) => {
+            const itemFeedback = feedback?.field === item.field;
 
-          return (
-            <button
-              key={item.field}
-              className="copy-contact"
-              type="button"
-              aria-label={`复制${item.label}：${item.copyValue}`}
-              onClick={() => handleCopy(item.field, item.copyValue)}
-            >
-              <span className="copy-value">{item.value}</span>
-              <span
-                className={`copy-hint${itemFeedback ? ' is-visible' : ''}`}
-                aria-live="polite"
+            return (
+              <button
+                key={item.field}
+                className="copy-contact"
+                type="button"
+                aria-label={`复制${item.label}：${item.copyValue}`}
+                onClick={() => handleCopy(item.field, item.copyValue)}
               >
-                {itemFeedback ? feedback.message : '复制'}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+                <span className="copy-value">{item.value}</span>
+                <span
+                  className={`copy-hint${itemFeedback ? ' is-visible' : ''}`}
+                  aria-live="polite"
+                >
+                  {itemFeedback ? feedback.message : '复制'}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </article>
     </section>
   );
 }
