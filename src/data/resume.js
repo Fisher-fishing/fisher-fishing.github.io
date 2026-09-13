@@ -11,7 +11,7 @@ export const profile = {
   role: '前端开发工程师',
   direction: 'React 方向',
   summary:
-    '以 JavaScript 为主要开发语言，专注业务页面、组件复用与接口联调。持续学习 AI Agent 与 AI 应用开发。',
+    '主要使用 JavaScript（ES6+）、React、React Hooks、TypeScript 和 Ant Design 进行前端开发，具备业务页面实现、组件复用、响应式适配及接口联调经验；了解 Node.js、Express、MySQL 等后端技术栈。日常使用 Cursor、ChatGPT、Claude、Codex 等 AI 编码工具与 Agent，辅助需求拆解、代码理解、编码排错和文档整理。',
   education: '华北理工大学 · 计算机科学与技术 · 本科',
   // location: '男 · 杭州',
   location: '杭州',
@@ -56,8 +56,8 @@ export const skills = [
     caption: '学习与探索',
     title: 'AI 应用方向',
     description:
-      '围绕面试练习与代码审查设计个人练习项目，关注模型接口、提示词与结构化反馈。',
-    tags: ['个人练习项目', '大模型 API', 'Express'],
+      '围绕面试练习与代码审查设计实践项目，关注模型接口、提示词与结构化反馈。',
+    tags: ['实践项目', '大模型 API', 'Express'],
   },
 ];
 
@@ -114,7 +114,7 @@ export const projects = {
   },
   practice: [
     {
-      badge: '个人练习项目',
+      badge: '实践项目',
       title: 'AI 面试 Agent',
       date: '2026.09 — 至今',
       introduction:
@@ -127,7 +127,7 @@ export const projects = {
       tags: ['React', 'Node.js', 'Express', '大模型 API'],
     },
     {
-      badge: '个人练习项目',
+      badge: '实践项目',
       title: '代码审查 Agent',
       date: '2026.09',
       introduction:

@@ -36,11 +36,11 @@ function App() {
       />
       <main id="main" className="page">
         <Intro profile={profile} />
+        <Contact contact={contact} />
         <Skills skills={skills} />
         <Experience experience={experience} />
         <Projects projects={projects} />
         <Education education={education} />
-        <Contact contact={contact} />
       </main>
       <Footer name={profile.name} />
     </>
